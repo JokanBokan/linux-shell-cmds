@@ -17,6 +17,7 @@ int main(int argc, char** argv) {
     char wd[1024];
     if(getcwd(wd, 1024) == NULL) {
         perror("getcwd");
+        return 1;
     }
 
     printf("%s\n", wd);
